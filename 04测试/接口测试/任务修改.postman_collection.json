@@ -1,0 +1,2481 @@
+{
+	"variables": [],
+	"info": {
+		"name": "任务修改",
+		"_postman_id": "18aa4cdb-d8e6-d33c-5ea1-6b461be99747",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "任务修改，正确，jobType：1，state：0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"123\",\n\t\"jobType\":1,\n\t\"state\":0,\n\t\"name\":\"name1\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务修改，正确，jobType：1，state：1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"123\",\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"name1\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务修改，正确，jobType：2，state：0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"123\",\n\t\"jobType\":2,\n\t\"state\":0,\n\t\"name\":\"name1\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务修改，正确，jobType：2，state：1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"123\",\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"name1\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务修改，正确，name参数为最小长度1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"1\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务修改，正确，name参数为最大长度32",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"123\",\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"12345678901234567890123456789012\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务修改，正确，daySet参数布控星期为单个",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"123\",\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务修改，正确，daySet参数布控星期为多个",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"123\",\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务修改，正确，memo参数任务描述为最小长度1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"123\",\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"1\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务修改，正确，memo参数任务描述为最大长度1000",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"123\",\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务修改，正确，jobObjects参数目标人为单个",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"123\",\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"1234567890\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务修改，正确，jobObjects参数目标人为多个",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"123\",\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"1234567890\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务修改，正确，jobChannels参数通道为单个",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"123\",\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"1234567890\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务修改，正确，jobChannels参数通道为多个",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"123\",\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"1234567890\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务修改，正确，jobTags参数标签为单个",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"123\",\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"1234567890\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务修改，正确，jobTags参数标签为多个",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"123\",\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"1234567890\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123\",\n\t\"jobTags\":\"123\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，正确，jobTemplateDbs参数模板库为单个",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"1234567890\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，正确，jobTemplateDbs参数模板库为多个",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"1234567890\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，正确，没有全部非必填项",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"uid\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，jobType参数为0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":0,\n\t\"state\":0,\n\t\"name\":\"name1\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，jobType参数为3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":3,\n\t\"state\":0,\n\t\"name\":\"name1\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，state参数为负",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":-1,\n\t\"name\":\"name12\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，state参数大于1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":2,\n\t\"name\":\"name12\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，name参数为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，name参数超过最大长度32",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"12345678901234567890123456789012345\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，beginDateStr参数格式错误",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980010101\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，beginDateStr参数超出长度",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-0101\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，endDateStr参数格式错误",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012*01*01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，endDateStr参数超出长度",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，daySet参数格式错误",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1-2-3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，daySet参数超出长度",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5,6,7,8,9,0\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，beginHour参数为负",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"-1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，beginHour2参数为负",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"-1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，beginHour参数超过24",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"30\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，beginHour2参数超过24",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"20\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"100\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，beginMin参数为负",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"10\",\n\t\"beginMin\":\"-1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，beginMin2参数为负",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"10\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"-1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，beginMin参数超过60",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"10\",\n\t\"beginMin\":\"100\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，beginMin2参数超过60",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"10\",\n\t\"beginMin\":\"10\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，endHour参数为负",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"20\",\n\t\"beginMin\":\"10\",\n\t\"endHour\":\"-1\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，endHour2参数为负",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"10\",\n\t\"beginMin\":\"10\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"-20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，endHour参数超过24",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"20\",\n\t\"beginMin\":\"10\",\n\t\"endHour\":\"100\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，endHour2参数超过24",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"10\",\n\t\"beginMin\":\"10\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"200\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，endMin参数为负",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"10\",\n\t\"beginMin\":\"10\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"-60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，endMin2参数为负",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"10\",\n\t\"beginMin\":\"10\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"-20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，endMin参数超过60",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"10\",\n\t\"beginMin\":\"10\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"600\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，endMin2参数超过60",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"10\",\n\t\"beginMin\":\"10\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"600\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，beginHour小于endHour",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"20\",\n\t\"beginMin\":\"10\",\n\t\"endHour\":\"10\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"600\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，beginHour小于endHour2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"10\",\n\t\"beginMin\":\"10\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"20\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"10\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，memo参数为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"10\",\n\t\"beginMin\":\"10\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"20\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"10\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，memo参数超过最大长度1000",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，uid参数为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"1234567890\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，jobObjects参数为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"1234567890\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，jobChannels参数为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"1234567890\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123\",\n\t\"jobChannels\":\"\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，jobTags参数为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"1234567890\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123\",\n\t\"jobChannels\":\"123\",\n\t\"jobTags\":\"\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，jobTemplateDbs参数为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":2,\n\t\"state\":1,\n\t\"name\":\"123\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"1234567890\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123\",\n\t\"jobChannels\":\"123\",\n\t\"jobTags\":\"123\",\n\t\"jobTemplates\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "任务新增，错误，重复新建",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/jobs/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jobType\":1,\n\t\"state\":0,\n\t\"name\":\"name1\",\n\t\"beginDateStr\":\"1980-01-01\",\n\t\"endDateStr\":\"2012-01-01\",\n\t\"daySet\":\"1,2,3,4,5\",\n\t\"beginHour\":\"1\",\n\t\"beginMin\":\"1\",\n\t\"endHour\":\"20\",\n\t\"endMin\":\"60\",\n\t\"beginHour2\":\"1\",\n\t\"beginMin2\":\"1\",\n\t\"endHour2\":\"20\",\n\t\"endMin2\":\"60\",\n\t\"memo\":\"12345\",\n\t\"methodId\":\"123\",\n\t\"uid\":\"123\",\n\t\"jobObjects\":\"123,456,789\",\n\t\"jobChannels\":\"123,456,789\",\n\t\"jobTags\":\"123,456,789\",\n\t\"jobTemplates\":\"123,456,789\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,31 @@
+{
+	"variables": [],
+	"info": {
+		"name": "确认告警目标",
+		"_postman_id": "d7d47406-27a3-c9fe-6663-8f37803872f9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "确认告警目标，正确",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/originalAlerts/confirm",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"alertUuid\":\"100\",\n\t\"fcmpFobjId\":\"300\",\n\t\"acker\":\"李四\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

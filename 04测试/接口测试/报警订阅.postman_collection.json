@@ -1,0 +1,141 @@
+{
+	"variables": [],
+	"info": {
+		"name": "报警订阅",
+		"_postman_id": "f185dd45-a8dc-49c6-aaeb-8f50b21f7cbe",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "报警订阅，正确",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysSubscribe/saveOriginal",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uid\":\"0ca4c2e45d524b44abf297574878217c\",\n\t\"jobId\":\"0112491defab43a7bd7bd02ef9bd923c\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "报警订阅，错误，uid为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 12003;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysSubscribe/saveOriginal",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uid\":\"\",\n\t\"jobId\":\"0112491defab43a7bd7bd02ef9bd923c\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "报警订阅，错误，jobId为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 12003;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysSubscribe/saveOriginal",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uid\":\"0ca4c2e45d524b44abf297574878217c\",\n\t\"jobId\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,627 @@
+{
+	"variables": [],
+	"info": {
+		"name": "用户登录认证",
+		"_postman_id": "d0911b95-7e29-cdad-e870-3e1b20b4ce89",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "用户登录认证，正确，username为最小长度4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ip\":\"192.168.1.176\",\n\t\"username\":\"1234\",\n\t\"password\":\"123456\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户登录认证，正确，username为最大长度16",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ip\":\"192.168.1.129\",\n\t\"username\":\"1234567890123456\",\n\t\"password\":\"123456\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户登录认证，正确，password为最小长度4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ip\":\"192.168.1.129\",\n\t\"username\":\"1234\",\n\t\"password\":\"1234\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户登录认证，正确，password为最大长度16",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ip\":\"192.168.1.129\",\n\t\"username\":\"1234\",\n\t\"password\":\"1234567890123456\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户登录认证，正确，username不区分大小写",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ip\":\"192.168.1.129\",\n\t\"username\":\"ADMIN\",\n\t\"password\":\"111111\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户登录认证，正确，password区分大小写",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ip\":\"192.168.1.129\",\n\t\"username\":\"abcabc\",\n\t\"password\":\"ABCABC\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户登录认证，正确，password中有特殊字符",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ip\":\"192.168.1.129\",\n\t\"username\":\"abcabcabc\",\n\t\"password\":\"abcabc_abc\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户登录认证，正确，password错误",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ip\":\"192.168.1.129\",\n\t\"username\":\"abcabc\",\n\t\"password\":\"1234\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户登录认证，错误，username小于最小长度4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ip\":\"192.168.1.129\",\n\t\"username\":\"1\",\n\t\"password\":\"abcabc\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户登录认证，错误，username大于最小长度16",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ip\":\"192.168.1.129\",\n\t\"username\":\"12345678901234567890\",\n\t\"password\":\"abcabc\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户登录认证，错误，password小于最小长度4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ip\":\"192.168.1.129\",\n\t\"username\":\"1234\",\n\t\"password\":\"1\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户登录认证，错误，password大于最小长度16",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ip\":\"192.168.1.129\",\n\t\"username\":\"1234\",\n\t\"password\":\"12345678901234567890\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户登录认证，错误，username中有特殊字符",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ip\":\"192.168.1.129\",\n\t\"username\":\"1234@#\",\n\t\"password\":\"1234\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户登录认证，错误，IP错误",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ip\":\"192.168.5291\",\n\t\"username\":\"1234\",\n\t\"password\":\"1234\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

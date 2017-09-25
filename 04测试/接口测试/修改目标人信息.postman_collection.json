@@ -1,0 +1,2016 @@
+{
+	"variables": [],
+	"info": {
+		"name": "修改目标人信息",
+		"_postman_id": "c8b44893-6f1a-b0a4-af5a-435c5e0c7459",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "修改目标人信息，正确，idType:0，sex：0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"name\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":0,\n\t\"remarks\":\"123\",\n\t\"idType\":0,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，idType:0，sex：1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"name\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":1,\n\t\"remarks\":\"123\",\n\t\"idType\":0,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，idType:0，sex：2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"name\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":2,\n\t\"remarks\":\"123\",\n\t\"idType\":0,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，idType:1，sex：0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"name\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":0,\n\t\"remarks\":\"123\",\n\t\"idType\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，idType:1，sex：1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"name\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":1,\n\t\"remarks\":\"123\",\n\t\"idType\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，idType:1，sex：2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"name\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":2,\n\t\"remarks\":\"123\",\n\t\"idType\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，idType:2，sex：0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"name\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":0,\n\t\"remarks\":\"123\",\n\t\"idType\":2,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，idType:2，sex：1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"name\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":0,\n\t\"remarks\":\"123\",\n\t\"idType\":2,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，idType:2，sex：2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"name\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":2,\n\t\"remarks\":\"123\",\n\t\"idType\":2,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，idType:3，sex：0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"name\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":0,\n\t\"remarks\":\"123\",\n\t\"idType\":3,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，idType:3，sex：1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"name\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":1,\n\t\"remarks\":\"123\",\n\t\"idType\":3,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，idType:3，sex：2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"name\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":2,\n\t\"remarks\":\"123\",\n\t\"idType\":3,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，mainFtid参数为最小长度1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"1\",\n\t\"name\":\"name\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":2,\n\t\"remarks\":\"123\",\n\t\"idType\":3,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，mainFtid参数为最大长度64",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"1234567890123456789012345678901234567890123456789012345678901234\",\n\t\"name\":\"name\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":2,\n\t\"remarks\":\"123\",\n\t\"idType\":3,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，name参数为最小长度1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"1234567890\",\n\t\"name\":\"1\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":2,\n\t\"remarks\":\"123\",\n\t\"idType\":3,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，name参数为最大长度60",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"1234567890\",\n\t\"name\":\"1234567890123456789012345678901234567890123456789012345678901234\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":2,\n\t\"remarks\":\"123\",\n\t\"idType\":3,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，ethic参数为最小长度1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"1234567890\",\n\t\"name\":\"123\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":2,\n\t\"remarks\":\"123\",\n\t\"idType\":3,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"1\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，ethic参数为最大长度15",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"1234567890\",\n\t\"name\":\"123\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":2,\n\t\"remarks\":\"123\",\n\t\"idType\":3,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123456789012345\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，idNumb参数为最小长度1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"1234567890\",\n\t\"name\":\"123\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":2,\n\t\"remarks\":\"123\",\n\t\"idType\":3,\n\t\"idNumb\":\"1\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123456789012345\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，idNumb参数为最大长度32",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"1234567890\",\n\t\"name\":\"123\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":2,\n\t\"remarks\":\"123\",\n\t\"idType\":3,\n\t\"idNumb\":\"12345678901234567890123456789012\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123456789012345\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，remarks参数为最小长度1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"1234567890\",\n\t\"name\":\"123\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":2,\n\t\"remarks\":\"1\",\n\t\"idType\":3,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"1234567890\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，remarks参数为最大长度500",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"1234567890\",\n\t\"name\":\"123\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":2,\n\t\"remarks\":\"12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890\",\n\t\"idType\":3,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"1234567890\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，addr参数为最小长度1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"1234567890\",\n\t\"name\":\"123\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":2,\n\t\"remarks\":\"1234567890\",\n\t\"idType\":3,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"1\",\n\t\"ethnic\":\"1234567890\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，addr参数为最大长度500",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"1234567890\",\n\t\"name\":\"123\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":2,\n\t\"remarks\":\"123\",\n\t\"idType\":3,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890\",\n\t\"ethnic\":\"1234567890\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，tags参数为最小长度1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"1234567890\",\n\t\"name\":\"123\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":2,\n\t\"remarks\":\"1234567890\",\n\t\"idType\":3,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"1\",\n\t\"ethnic\":\"1234567890\",\n\t\"ftdbId\":123,\n\t\"tags\":\"1\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，tags参数为最大长度60",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"1234567890\",\n\t\"name\":\"123\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":2,\n\t\"remarks\":\"1234567890\",\n\t\"idType\":3,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"1\",\n\t\"ethnic\":\"1234567890\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123456789012345678901234567890123456789012345678901234567890\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，正确，没有全部非必填项",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"1234567890\",\n\t\"name\":\"123\",\n\t\"idType\":3,\n\t\"sex\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"ftdbId\":123\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，name参数为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":1,\n\t\"remarks\":\"123\",\n\t\"idType\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，name参数超出最大长度64",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"1234567890123456789012345678901234567890123456789012345678901234\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":1,\n\t\"remarks\":\"123\",\n\t\"idType\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，sex参数为负",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"123\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":-1,\n\t\"remarks\":\"123\",\n\t\"idType\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，sex参数大于2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"123\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":3,\n\t\"remarks\":\"123\",\n\t\"idType\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，ethnic参数为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"123\",\n\t\"sst\":1,\n\t\"reserved\":1,\n\t\"sex\":3,\n\t\"remarks\":\"123\",\n\t\"idType\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，ethnic参数超出最大长度15",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"123\",\n\t\"sst\":1,\n\t\"reserved\":1,\n\t\"sex\":3,\n\t\"remarks\":\"123\",\n\t\"idType\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"12345678901234567890\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，idType参数为负",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"123\",\n\t\"sst\":1,\n\t\"reserved\":1,\n\t\"sex\":3,\n\t\"remarks\":\"123\",\n\t\"idType\":-1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，idType参数大于3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"123\",\n\t\"sst\":1,\n\t\"reserved\":1,\n\t\"sex\":3,\n\t\"remarks\":\"123\",\n\t\"idType\":4,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，idNumb参数为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"123\",\n\t\"sst\":1,\n\t\"reserved\":1,\n\t\"sex\":3,\n\t\"remarks\":\"123\",\n\t\"idType\":1,\n\t\"idNumb\":\"\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，idNumb参数超出最大长度32",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"123\",\n\t\"sst\":1,\n\t\"reserved\":1,\n\t\"sex\":3,\n\t\"remarks\":\"123\",\n\t\"idType\":1,\n\t\"idNumb\":\"12345678901234567890123456789012345\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，remarks参数为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"123\",\n\t\"sst\":1,\n\t\"reserved\":1,\n\t\"sex\":3,\n\t\"remarks\":\"\",\n\t\"idType\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，remarks参数超出最大长度500",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"123\",\n\t\"sst\":1,\n\t\"reserved\":1,\n\t\"sex\":3,\n\t\"remarks\":\"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345\",\n\t\"idType\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，birthDateStr参数格式错误",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"123\",\n\t\"sst\":1,\n\t\"reserved\":1,\n\t\"sex\":1,\n\t\"remarks\":\"1234567890\",\n\t\"idType\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"19991212\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，birthDateStr参数超出长度",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"123\",\n\t\"sst\":1,\n\t\"reserved\":1,\n\t\"sex\":1,\n\t\"remarks\":\"1234567890\",\n\t\"idType\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12-123456\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，addr参数为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"123\",\n\t\"sst\":1,\n\t\"reserved\":1,\n\t\"sex\":1,\n\t\"remarks\":\"1234567890\",\n\t\"idType\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12-123456\",\n\t\"addr\":\"\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，addr参数超出最大长度500",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"123\",\n\t\"sst\":1,\n\t\"reserved\":1,\n\t\"sex\":1,\n\t\"remarks\":\"1234567890\",\n\t\"idType\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12-123456\",\n\t\"addr\":\"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，tags参数为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"123\",\n\t\"sst\":1,\n\t\"reserved\":1,\n\t\"sex\":1,\n\t\"remarks\":\"1234567890\",\n\t\"idType\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12-123456\",\n\t\"addr\":\"1234567890\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，tags参数超出最大长度60",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"5bdc846f583841488d5b27926594e7fa\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"123\",\n\t\"sst\":1,\n\t\"reserved\":1,\n\t\"sex\":1,\n\t\"remarks\":\"1234567890\",\n\t\"idType\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12-123456\",\n\t\"addr\":\"1234567890\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123456789012345678901234567890123456789012345678901234567890123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "修改目标人信息，错误，错误uuid",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/faceObject/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uuid\":\"cbb8160322774d599dd64c57f76df13f123\",\n\t\"mainFtid\":\"123\",\n\t\"name\":\"name\",\n\t\"sst\":3,\n\t\"reserved\":1,\n\t\"sex\":1,\n\t\"remarks\":\"123\",\n\t\"idType\":1,\n\t\"idNumb\":\"41030519800209353X\",\n\t\"birthDateStr\":\"1999-12-12\",\n\t\"addr\":\"123\",\n\t\"ethnic\":\"123\",\n\t\"ftdbId\":123,\n\t\"tags\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

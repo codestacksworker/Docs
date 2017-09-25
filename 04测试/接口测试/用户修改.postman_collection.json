@@ -1,0 +1,407 @@
+{
+	"variables": [],
+	"info": {
+		"name": "用户修改",
+		"_postman_id": "b9baaab3-b243-02d0-f35e-6c3351a559d3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "用户修改，正确，username为最小长度4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"1234\",\n\t\"password\":\"1234\",\n\t\"realname\":\"1234test\",\n\t\"email\":\"123@example.com\",\n\t\"mobile\":\"13812345678\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户修改，正确，username为最大长度16",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"12344567890123456\",\n\t\"password\":\"1234\",\n\t\"realname\":\"1234test\",\n\t\"email\":\"123@example.com\",\n\t\"mobile\":\"13812345678\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户修改，正确，password为最小长度4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"12344567890123456\",\n\t\"password\":\"1234\",\n\t\"realname\":\"1234test\",\n\t\"email\":\"123@example.com\",\n\t\"mobile\":\"13812345678\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户修改，正确，password为最大长度16",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"12344567890123456\",\n\t\"password\":\"12344567890123456\",\n\t\"realname\":\"1234test\",\n\t\"email\":\"123@example.com\",\n\t\"mobile\":\"13812345678\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户修改，错误，username小于最小长度4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"1\",\n\t\"password\":\"12344567890123456\",\n\t\"realname\":\"1234test\",\n\t\"email\":\"123@example.com\",\n\t\"mobile\":\"13812345678\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户修改，错误，username大于最小长度16",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"123445678901234567890\",\n\t\"password\":\"12344567890123456\",\n\t\"realname\":\"1234test\",\n\t\"email\":\"123@example.com\",\n\t\"mobile\":\"13812345678\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户修改，错误，password小于最小长度4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"12344567890123456\",\n\t\"password\":\"1\",\n\t\"realname\":\"1234test\",\n\t\"email\":\"123@example.com\",\n\t\"mobile\":\"13812345678\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户修改，错误，password大于最小长度16",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"12344567890123456\",\n\t\"password\":\"123445678901234567890\",\n\t\"realname\":\"1234test\",\n\t\"email\":\"123@example.com\",\n\t\"mobile\":\"13812345678\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "用户修改，错误，username中有特殊字符",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/sysUser/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"12344567890123!@#\",\n\t\"password\":\"12344567890123456\",\n\t\"realname\":\"1234test\",\n\t\"email\":\"123@example.com\",\n\t\"mobile\":\"13812345678\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

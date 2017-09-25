@@ -1,0 +1,31 @@
+{
+	"variables": [],
+	"info": {
+		"name": "告警后一组切换",
+		"_postman_id": "b06dc06a-164c-ff0b-5d80-ff2d30445eaf",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "告警后一组切换，正确",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/originalAlerts/nextGroupAlerts",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\":\"123\",\n\t\"alertTime\":\"1990-09-09 00:00:00\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

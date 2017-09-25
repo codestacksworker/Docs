@@ -1,0 +1,111 @@
+{
+	"variables": [],
+	"info": {
+		"name": "未复合告警统计",
+		"_postman_id": "2e8467fb-6618-e7e7-4503-8a87ccf329d3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "未复合告警统计，正确",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/statistics/uncheckedCount",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"alertStartTime\":\"1990-09-09\",\n\t\"alertEndTime\":\"2017-09-09\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "未复合告警统计，正确，alertStartTime为空",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/statistics/uncheckedCount",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"alertStartTime\":\"\",\n\t\"alertEndTime\":\"2017-09-09\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "未复合告警统计，正确，alertEndTime为空",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/statistics/uncheckedCount",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"alertStartTime\":\"1990-09-09\",\n\t\"alertEndTime\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "未复合告警统计，正确，alertStartTime、alertEndTime为空",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/statistics/uncheckedCount",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"alertStartTime\":\"\",\n\t\"alertEndTime\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "未复合告警统计，错误，alertEndTime小于alertStartTime",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/statistics/uncheckedCount",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"alertStartTime\":\"2990-09-09\",\n\t\"alertEndTime\":\"2017-09-09\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

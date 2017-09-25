@@ -1,0 +1,91 @@
+{
+	"variables": [],
+	"info": {
+		"name": "最近24小时统计",
+		"_postman_id": "7a42a157-4ff4-d65a-b5e8-8922ae46d9ca",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "最近24小时统计，正确",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/statistics/checkedStatistics",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"startTime\":\"1990-09-09 00:00:00\",\n\t\"endTime\":\"2017-09-09 00:00:00\",\n\t\"jobId\":\"0112491defab43a7bd7bd02ef9bd923c\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "最近24小时统计，错误，startTime格式错误",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/statistics/checkedStatistics",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"startTime\":\"1990-09-09#00:00:00\",\n\t\"endTime\":\"2017-09-09 00:00:00\",\n\t\"jobId\":\"0112491defab43a7bd7bd02ef9bd923c\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "最近24小时统计，错误，endTime格式错误",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/statistics/checkedStatistics",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"startTime\":\"1990-09-09 00:00:00\",\n\t\"endTime\":\"2017-09-09#00:00:00\",\n\t\"jobId\":\"0112491defab43a7bd7bd02ef9bd923c\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "最近24小时统计，错误，endTime小于startTime",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/statistics/checkedStatistics",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"startTime\":\"2990-09-09 00:00:00\",\n\t\"endTime\":\"2017-09-09 00:00:00\",\n\t\"jobId\":\"0112491defab43a7bd7bd02ef9bd923c\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

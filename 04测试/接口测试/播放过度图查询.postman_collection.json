@@ -1,0 +1,91 @@
+{
+	"variables": [],
+	"info": {
+		"name": "播放过度图查询",
+		"_postman_id": "9d81f1a2-8a8c-cde3-1080-fb75a52ae61e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "播放过程图查询，正确，单个查询",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/vedioImage",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"8d20c4c6b63d4af68f66b304cecd875b\"]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "播放过程图查询，正确，多个查询",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/vedioImage",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"8d20c4c6b63d4af68f66b304cecd875b\", \"123\"]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "播放过程图查询，错误，错误的uuid",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/vedioImage",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"8d20c4c6b63d4af68f66b304cecd875b123\"]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "播放过程图查询，错误，重复查询",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/vedioImage",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"8d20c4c6b63d4af68f66b304cecd875b\", \"8d20c4c6b63d4af68f66b304cecd875b\"]"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

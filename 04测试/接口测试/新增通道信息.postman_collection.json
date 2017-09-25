@@ -1,0 +1,2806 @@
+{
+	"variables": [],
+	"info": {
+		"name": "新增通道信息",
+		"_postman_id": "a3e282eb-80a1-5dd6-8422-5c579c179d82",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "新增通道信息，正确，channelDirect：1，capStat：0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"0\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：1，capStat：1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：1，capStat：2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"2\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：2，capStat：0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"2\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"0\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：2，capStat：1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"2\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：2，capStat：2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"2\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"2\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：3，capStat：0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"3\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"0\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：3，capStat：1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"3\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：3，capStat：2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"3\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"2\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：4，capStat：0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"4\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"0\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：4，capStat：1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"4\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：4，capStat：2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"4\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"2\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：5，capStat：0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"5\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"0\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：5，capStat：1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"5\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：5，capStat：2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"5\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"2\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：6，capStat：0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"6\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"0\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：6，capStat：1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"6\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：6，capStat：2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"6\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"2\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：7，capStat：0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"7\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"0\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：7，capStat：1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"7\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：7，capStat：2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"7\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"2\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：8，capStat：0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"8\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"0\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：8，capStat：1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"8\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDirect：8，capStat：2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"8\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"2\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelVerid为最小长度1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"1\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelVerid为最大长度60",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123456789012345678901234567890123456789012345678901234567890\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelName为最小长度1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"1\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelName为最大长度60",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123456789012345678901234567890123456789012345678901234567890\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDescription为最小长度1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"1\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelDescription为最大长度500",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelAddr为最小长度1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"1\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelAddr为最大长度500",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelUid为最小长度1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"1\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelUid为最大长度15",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123456789012345\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelPsw为最小长度1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"1\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelPsw为最大长度15",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123456789012345\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelNo为最小长度1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"1\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelNo为最大长度60",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123456789012345678901234567890123456789012345678901234567890\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelArea为最小长度1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"1\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，channelArea为最大长度120",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，sdkVer为最小长度1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，sdkVer为最大长度30",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"123456789012345678901234567890\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，正确，没有全部非必填项",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelName\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"regionId\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，channelDirect为0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"0\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，channelDirect大于8",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"9\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，capStat为负",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"-1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，capStat大于2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"10\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，channelVerid为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，channelVerid大于最大长度60",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"12345678901234567890123456789012345678901234567890123456789012345\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，channelName为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，channelName大于最大长度60",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"12345678901234567890123456789012345678901234567890123456789012345\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，channelAddr为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，channelAddr大于最大长度500",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，channelDescription为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，channelDescription大于最大长度",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，channelUid为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，channelUid大于最大长度15",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"12345678901234567890\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，channelPsw为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，channelPsw大于最大长度15",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"12345678901234567890\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，channelNo为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，channelNo大于最大长度60",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123456789012345678901234567890123456789012345678901234567890123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，channelArea为空",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，channelArea大于最大长度120",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123456789012345678901234567890123456789012345678901234567890123123456789012345678901234567890123456789012345678901234567890123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"3\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增通道信息，错误，important为负",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelVerid\":\"123\",\n\t\"channelName\":\"123\",\n\t\"channelDescription\":\"123\",\n\t\"channelType\":\"1\",\n\t\"channelAddr\":\"123\",\n\t\"channelPort\":\"8080\",\n\t\"channelUid\":\"123\",\n\t\"channelPsw\":\"123\",\n\t\"channelGuid\":\"123\",\n\t\"channelNo\":\"123\",\n\t\"minFaceWidth\":\"123\",\n\t\"minCapDistance\":\"123\",\n\t\"maxSaveDistance\":\"123\",\n\t\"maxYaw\":\"123\",\n\t\"maxRoll\":\"123\",\n\t\"maxPitch\":\"123\",\n\t\"channelLongitude\":\"123\",\n\t\"channelLatitude\":\"123\",\n\t\"channelArea\":\"123\",\n\t\"channelDirect\":\"1\",\n\t\"channelThreshost\":\"123\",\n\t\"capStat\":\"1\",\n\t\"regionId\":\"123\",\n\t\"sdkVer\":\"1\",\n\t\"important\":\"-1\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

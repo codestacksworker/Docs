@@ -1,0 +1,627 @@
+{
+	"variables": [],
+	"info": {
+		"name": "报警信息查询",
+		"_postman_id": "1dea2018-42ef-6470-a17b-9330313742b1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "报警信息查询，正确，idType：0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/secAlerts/query",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"f\":{\n\t\t\"name\":\"name\",\n\t\t\"DBID\":\"21\",\n\t\t\"channelIDs\":\"123\",\n\t\t\"idType\":\"0\",\n\t\t\"idNumber\":\"123\",\n\t\t\"startTime\":\"1990-09-09 00:00:00\",\n\t\t\"endTime\":\"2017-09-09 00:00:00\"\n\t},\n\t\"pageRows\":\"1\",\n\t\"pageNo\":\"1\",\n\t\"pageFlag\":\"pageFlag\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "报警信息查询，正确，idType：1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/secAlerts/query",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"f\":{\n\t\t\"name\":\"name\",\n\t\t\"DBID\":\"21\",\n\t\t\"channelIDs\":\"123\",\n\t\t\"idType\":\"1\",\n\t\t\"idNumber\":\"123\",\n\t\t\"startTime\":\"1990-09-09 00:00:00\",\n\t\t\"endTime\":\"2017-09-09 00:00:00\"\n\t},\n\t\"pageRows\":\"1\",\n\t\"pageNo\":\"1\",\n\t\"pageFlag\":\"pageFlag\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "报警信息查询，正确，idType：2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/secAlerts/query",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"f\":{\n\t\t\"name\":\"name\",\n\t\t\"DBID\":\"21\",\n\t\t\"channelIDs\":\"123\",\n\t\t\"idType\":\"2\",\n\t\t\"idNumber\":\"123\",\n\t\t\"startTime\":\"1990-09-09 00:00:00\",\n\t\t\"endTime\":\"2017-09-09 00:00:00\"\n\t},\n\t\"pageRows\":\"1\",\n\t\"pageNo\":\"1\",\n\t\"pageFlag\":\"pageFlag\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "报警信息查询，正确，pageFlag为空显示分页信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/secAlerts/query",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"f\":{\n\t\t\"name\":\"name\",\n\t\t\"DBID\":\"21\",\n\t\t\"channelIDs\":\"123\",\n\t\t\"idType\":\"2\",\n\t\t\"idNumber\":\"123\",\n\t\t\"startTime\":\"1990-09-09 00:00:00\",\n\t\t\"endTime\":\"2017-09-09 00:00:00\"\n\t},\n\t\"pageRows\":\"1\",\n\t\"pageNo\":\"1\",\n\t\"pageFlag\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "报警信息查询，正确，pageFlag为pageFlag显示分页信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/secAlerts/query",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"f\":{\n\t\t\"name\":\"name\",\n\t\t\"DBID\":\"21\",\n\t\t\"channelIDs\":\"123\",\n\t\t\"idType\":\"2\",\n\t\t\"idNumber\":\"123\",\n\t\t\"startTime\":\"1990-09-09 00:00:00\",\n\t\t\"endTime\":\"2017-09-09 00:00:00\"\n\t},\n\t\"pageRows\":\"1\",\n\t\"pageNo\":\"1\",\n\t\"pageFlag\":\"pageFlag\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "报警信息查询，正确，pageFlag为其它值显示所有信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/secAlerts/query",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"f\":{\n\t\t\"name\":\"name\",\n\t\t\"DBID\":\"21\",\n\t\t\"channelIDs\":\"123\",\n\t\t\"idType\":\"2\",\n\t\t\"idNumber\":\"123\",\n\t\t\"startTime\":\"1990-09-09 00:00:00\",\n\t\t\"endTime\":\"2017-09-09 00:00:00\"\n\t},\n\t\"pageRows\":\"1\",\n\t\"pageNo\":\"1\",\n\t\"pageFlag\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "报警信息查询，错误，idType为负",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/secAlerts/query",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"f\":{\n\t\t\"name\":\"name\",\n\t\t\"DBID\":\"21\",\n\t\t\"channelIDs\":\"123\",\n\t\t\"idType\":\"-2\",\n\t\t\"idNumber\":\"123\",\n\t\t\"startTime\":\"1990-09-09 00:00:00\",\n\t\t\"endTime\":\"2017-09-09 00:00:00\"\n\t},\n\t\"pageRows\":\"1\",\n\t\"pageNo\":\"1\",\n\t\"pageFlag\":\"pageFlag\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "报警信息查询，错误，idType大于2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/secAlerts/query",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"f\":{\n\t\t\"name\":\"name\",\n\t\t\"DBID\":\"21\",\n\t\t\"channelIDs\":\"123\",\n\t\t\"idType\":\"12\",\n\t\t\"idNumber\":\"123\",\n\t\t\"startTime\":\"1990-09-09 00:00:00\",\n\t\t\"endTime\":\"2017-09-09 00:00:00\"\n\t},\n\t\"pageRows\":\"1\",\n\t\"pageNo\":\"1\",\n\t\"pageFlag\":\"pageFlag\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "报警信息查询，错误，startTime不符合规范",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/secAlerts/query",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"f\":{\n\t\t\"name\":\"name\",\n\t\t\"DBID\":\"21\",\n\t\t\"channelIDs\":\"123\",\n\t\t\"idType\":\"2\",\n\t\t\"idNumber\":\"123\",\n\t\t\"startTime\":\"1990-09-09#00:00:00\",\n\t\t\"endTime\":\"2017-09-09 00:00:00\"\n\t},\n\t\"pageRows\":\"1\",\n\t\"pageNo\":\"1\",\n\t\"pageFlag\":\"pageFlag\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "报警信息查询，错误，startTime长度超出返回",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/secAlerts/query",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"f\":{\n\t\t\"name\":\"name\",\n\t\t\"DBID\":\"21\",\n\t\t\"channelIDs\":\"123\",\n\t\t\"idType\":\"2\",\n\t\t\"idNumber\":\"123\",\n\t\t\"startTime\":\"1990-09-09 00:00:00123\",\n\t\t\"endTime\":\"2017-09-09 00:00:00\"\n\t},\n\t\"pageRows\":\"1\",\n\t\"pageNo\":\"1\",\n\t\"pageFlag\":\"pageFlag\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "报警信息查询，错误，endTime不符合规范",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/secAlerts/query",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"f\":{\n\t\t\"name\":\"name\",\n\t\t\"DBID\":\"21\",\n\t\t\"channelIDs\":\"123\",\n\t\t\"idType\":\"2\",\n\t\t\"idNumber\":\"123\",\n\t\t\"startTime\":\"1990-09-09 00:00:00\",\n\t\t\"endTime\":\"2017-09-09#00:00:00\"\n\t},\n\t\"pageRows\":\"1\",\n\t\"pageNo\":\"1\",\n\t\"pageFlag\":\"pageFlag\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "报警信息查询，错误，endTime长度超出返回",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/secAlerts/query",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"f\":{\n\t\t\"name\":\"name\",\n\t\t\"DBID\":\"21\",\n\t\t\"channelIDs\":\"123\",\n\t\t\"idType\":\"2\",\n\t\t\"idNumber\":\"123\",\n\t\t\"startTime\":\"1990-09-09 00:00:00\",\n\t\t\"endTime\":\"2017-09-09 00:00:00123\"\n\t},\n\t\"pageRows\":\"1\",\n\t\"pageNo\":\"1\",\n\t\"pageFlag\":\"pageFlag\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "报警信息查询，错误，pageRows为负",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/secAlerts/query",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"f\":{\n\t\t\"name\":\"name\",\n\t\t\"DBID\":\"21\",\n\t\t\"channelIDs\":\"123\",\n\t\t\"idType\":\"2\",\n\t\t\"idNumber\":\"123\",\n\t\t\"startTime\":\"1990-09-09 00:00:00\",\n\t\t\"endTime\":\"2017-09-09 00:00:00\"\n\t},\n\t\"pageRows\":\"-1\",\n\t\"pageNo\":\"1\",\n\t\"pageFlag\":\"pageFlag\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "报警信息查询，错误，pageNo为负",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string error\"] = responseBody.has(\"error\");",
+							"",
+							"tests[\"Body matches string message\"] = responseBody.has(\"message\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+							"",
+							"var jsonData = JSON.parse(responseBody.replace(/'/g,'\"'));",
+							"console.log(jsonData);",
+							"tests[\"error\"] = jsonData[\"error\"] === 0;",
+							"tests[\"message\"] = jsonData[\"message\"] === \"successful\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/secAlerts/query",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"f\":{\n\t\t\"name\":\"name\",\n\t\t\"DBID\":\"21\",\n\t\t\"channelIDs\":\"123\",\n\t\t\"idType\":\"2\",\n\t\t\"idNumber\":\"123\",\n\t\t\"startTime\":\"1990-09-09 00:00:00\",\n\t\t\"endTime\":\"2017-09-09 00:00:00\"\n\t},\n\t\"pageRows\":\"1\",\n\t\"pageNo\":\"-1\",\n\t\"pageFlag\":\"pageFlag\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

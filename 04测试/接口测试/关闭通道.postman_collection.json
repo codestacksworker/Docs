@@ -1,0 +1,91 @@
+{
+	"variables": [],
+	"info": {
+		"name": "关闭通道",
+		"_postman_id": "246bc8af-5fc6-6b8a-5596-2e244972ec9f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "关闭通道，正确，单个通道关闭",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/closeChannel",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"128\"]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "关闭通道，正确，多个通道关闭",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/closeChannel",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"8d20c4c6b63d4af68f66b304cecd875b\",\"128\"]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "关闭通道，错误，错误的uuid",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/closeChannel",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"8d20c4c6b63d4af68f66b304cecd875b128\"]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "关闭通道，错误，重复关闭",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/channel/closeChannel",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"8d20c4c6b63d4af68f66b304cecd875b\",\"8d20c4c6b63d4af68f66b304cecd875b\"]"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

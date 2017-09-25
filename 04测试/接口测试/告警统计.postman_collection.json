@@ -1,0 +1,111 @@
+{
+	"variables": [],
+	"info": {
+		"name": "告警统计",
+		"_postman_id": "deaaaa0c-3c23-1a06-2e65-5ad59a66d6d3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "告警统计，正确",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/statistics/alertCount",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"pubStartTime\":\"1990-09-09\",\n\t\"pubEndTime\":\"2017-09-09\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "告警统计，正确，pubStartTime为空",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/statistics/alertCount",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"pubStartTime\":\"\",\n\t\"pubEndTime\":\"2017-09-09\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "告警统计，正确，pubEndTime为空",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/statistics/alertCount",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"pubStartTime\":\"1990-09-09\",\n\t\"pubEndTime\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "告警统计，正确，pubStartTime、pubEndTime为空",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/statistics/alertCount",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"pubStartTime\":\"\",\n\t\"pubEndTime\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "告警统计，错误，pubEndTime小于pubStartTime",
+			"request": {
+				"url": "http://{{ip}}:{{port}}/facecore/statistics/alertCount",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"pubStartTime\":\"2990-09-09\",\n\t\"pubEndTime\":\"2017-09-09\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
